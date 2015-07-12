@@ -1,0 +1,97 @@
+// MAIN NAVIGATION 
+.main-nav
+    transition all 0.3s
+    position fixed
+    width 100%
+    top 0
+    left 0
+    z-index 2
+    background-color #2d303d
+    background-color rgba(45, 48, 61, 0.7)
+    overflow hidden
+    
+.main-nav__header
+    transition all 0.3s
+    display inline-block
+    float left
+    padding-left 20px
+
+.main-nav__link
+    transition all 0.3s
+    font-size 31px
+    display inline-block
+    vertical-align top
+    padding 17px 0 0 10px
+    color #fff
+    position relative
+    padding-left 80px
+    
+.main-nav__link .bold
+    font-weight 800
+    color #2a8cd0
+            
+.main-nav__link .block
+    font-size 18px
+    color #37baff
+    font-weight 300
+            
+.main-nav__link:before
+    position absolute
+    top 50%
+    left 0 
+    margin-top -39px
+    transition all 0.3s
+    content ""
+    display inline-block
+    width 70px
+    height 95px
+    background url(../img/defaults/logo.png) no-repeat center
+    background-size 68px auto
+           
+/* MAIN NAV HOVER LINKS */
+body.home a.home,
+body.ourTools a.ourTools,
+body.services a.services,
+body.contact a.contact,
+body.login a.login,
+body.signup a.signup,
+.site-nav a:hover
+    color #00c6ff
+    &:before
+        top 0px
+
+.site-nav
+    float right
+    overflow hidden
+    transition all 0.3s
+
+.site-nav__item
+    float left
+    padding 0 24px
+    color #fff
+        
+.site-nav__link
+    display block
+    line-height 95px
+    color #fff
+    font-size 18px
+    font-weight 300
+    box-sizing content-box
+    position relative
+    transition all 0.3s
+    
+.site-nav__link:before
+    transition all 0.3s
+    content ""
+    position absolute
+    top -3px
+    left 0
+    display block
+    width 100%
+    height 3px
+    background-color #00c6ff
+    transition all 0.3s
+        
+.double .site-nav__link
+    display inline-block
+        

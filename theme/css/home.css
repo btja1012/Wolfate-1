@@ -1,0 +1,187 @@
+/* generals */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+/* texts */
+:link, :visited {
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, pre, code {
+  font-size: 1em; }
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+  margin: 0;
+  padding: 0; }
+
+a img, :link img, :visited img {
+  border: none; }
+
+address {
+  font-style: normal; }
+
+img {
+  vertical-align: top; }
+
+/* Global variables */
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.block {
+  display: block; }
+
+.main-nav {
+  transition: all 0.3s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #2d303d;
+  background-color: rgba(45, 48, 61, 0.7);
+  overflow: hidden; }
+  .main-nav h1 {
+    transition: all 0.3s;
+    display: inline-block;
+    float: left;
+    padding-left: 20px; }
+    .main-nav h1 a {
+      transition: all 0.3s;
+      font-size: 31px;
+      display: inline-block;
+      vertical-align: top;
+      padding: 17px 0 0 10px;
+      color: #fff; }
+      .main-nav h1 a .bold {
+        font-weight: 800;
+        color: #2a8cd0; }
+      .main-nav h1 a .block {
+        font-size: 18px;
+        color: #37baff;
+        font-weight: 300; }
+    .main-nav h1:before {
+      transition: all 0.3s;
+      content: "";
+      display: inline-block;
+      width: 70px;
+      height: 95px;
+      background: url(img/defaults/logo.png) no-repeat center;
+      background-size: 68px auto; }
+
+body.home a.home,
+body.ourTools a.ourTools,
+body.services a.services,
+body.contact a.contact,
+body.login a.login,
+body.signup a.signup,
+.site-nav a:hover {
+  color: #00c6ff; }
+  body.home a.home:before,
+  body.ourTools a.ourTools:before,
+  body.services a.services:before,
+  body.contact a.contact:before,
+  body.login a.login:before,
+  body.signup a.signup:before,
+  .site-nav a:hover:before {
+    top: 0px; }
+
+.site-nav {
+  float: right;
+  overflow: hidden;
+  transition: all 0.5s; }
+  .site-nav li {
+    float: left;
+    padding: 0 24px;
+    color: #fff; }
+  .site-nav a {
+    display: block;
+    line-height: 95px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    box-sizing: content-box;
+    position: relative;
+    transition: all 0.5s; }
+    .site-nav a:before {
+      transition: all 0.3s;
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #00c6ff;
+      transition: all 0.3s; }
+  .site-nav .double a {
+    display: inline-block; }
+
+/* NOT TOP */
+.scroll-down {
+  background-color: #2d303d; }
+  .scroll-down h1:before {
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    background-size: 50px auto; }
+  .scroll-down h1 a {
+    padding-top: 0; }
+    .scroll-down h1 a .block {
+      line-height: 15px; }
+  .scroll-down .site-nav a {
+    line-height: 60px; }
+
+/* BUTTONS */
+.btn-dark {
+  min-width: 180px;
+  line-height: 24px;
+  padding: 18px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  background: #222533;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  cursor: pointer; }
+  .btn-dark:hover {
+    background: #00ACBA; }

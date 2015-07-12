@@ -1,0 +1,53 @@
+extends layout
+
+block content
+	section
+		//- SIGNUP FORM
+		article.user-registration
+			div.account-info
+				h2.advantages__title With your new account you'll be able to
+				ul.advantages
+					li.advantages__item.icon-barcode2 Create and manage lists of products
+					li.advantages__item.icon-group Set detailed data of your company crew
+					li.advantages__item.icon-addressbook2 Keep an updated database of your customers
+					li.advantages__item.icon-clipboard Maintain connection with your branch offices
+					li.advantages__item.icon-meter2 Set, review and edit daily, weekly or monthly goals
+					li.advantages__item.icon-atom See the process of all your company assets in one place
+					//- p Don't hesitate! let's work together and reach the top of your possibilities!
+			
+			div.signup-section
+				h2.icon-wolfate-icon Signup a new account
+				form(method="post")
+					ul.user-account
+						li.user-account__item
+							label.user-account__label(for="firstname") First Name
+							input.user-account__input(type="text" name="firstname" value="#{firstname}")
+							span.user-account__error.error #{firstname_error}
+						
+						li.user-account__item
+							label.user-account__label(for="lastname") Last Name
+							input.user-account__input(type="text" name="lastname" value="#{lastname}")
+							span.user-account__error.error #{lastname_error}
+						
+						li.user-account__item
+							label.user-account__label(for="username") User Name
+							input.user-account__input(type="text" name="username" value="#{username}")
+							span.user-account__error.error #{username_error}
+						
+						li.user-account__item
+							label.user-account__label(for="email") Email
+							input.user-account__input(type="text" name="email" value="")
+							span.user-account__error.error #{email_error}
+
+						li.user-account__item
+							label.user-account__label(for="username") Password
+							input.user-account__input(type="password" name="password" value="")
+							span.user-account__error.error #{password_error}
+						
+						li.user-account__item
+							label.user-account__label(for="verify") Verify Password
+							input.user-account__input(type="password" name="verify" value="")
+							span.user-account__error.error #{verify_error}
+						
+						li.user-account__item
+							button.user-account__button.btn-dark(type="submit") Get started

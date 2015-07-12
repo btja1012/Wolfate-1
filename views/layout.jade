@@ -1,0 +1,42 @@
+doctype html
+
+html
+	head
+		block head
+			meta(charset='utf-8')
+			meta(http-equiv='content-type', content='text/html;charset=utf-8')
+			meta(name='viewport', content='width=device-width,minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0')
+			link(href='/default/css/_style.css', rel='stylesheet', type='text/css')
+
+	body(class="#{page_class}")
+		nav.main-nav
+			h1.main-nav__header
+				a.main-nav__link(href="/")
+					span.main-nav__title.bold Wolf
+					span.main-nav__title ate
+					span.main-nav__sub-title.block Business Tools
+
+			ul.site-nav
+				li.site-nav__item
+					a.site-nav__link.home(href="/") Home
+				li.site-nav__item
+					a.site-nav__link.ourTools(href="#") Our Tools
+				li.site-nav__item
+					a.site-nav__link.services(href="#") Services
+				li.site-nav__item
+					a.site-nav__link.contact(href="#") Contact
+				if username
+					li.site-nav__item.user-welcome welcome #{username}
+						a.site-nav__link(href="/logout") Logout
+						a.site-nav__link(href="/newpost") New Post
+				else 
+					li.site-nav__item.double
+						a.site-nav__link.login(href="/login") Login
+						a.site-nav__link.signup(href="/signup") Sign Up
+
+	block content
+
+
+	block scripts
+		script(src="default/js/jquery-2.1.4.min.js")
+		script(src="default/js/wolfate.js")

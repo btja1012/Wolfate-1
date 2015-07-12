@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="defaults.css" rel="stylesheet" />
+  </head>
+
+<body>
+    <nav class="basic-nav">
+        <ul>
+            <li><a href="/signup">Not a user?</a></li>
+            <li><a href="/">Go Back Home</a></li>
+        </ul>
+    </nav>
+    <h2>Login</h2>
+    <form method="post">
+    <span class="error">{{login_error}}</span>
+    <ul class="login">
+        <li>
+            <label for="username">Username</label>
+            <input type="text" name="username" value="{{username}}">
+        </li>
+        <li>
+            <label for="password">Password</label>
+            <input type="password" name="password" value="{{password}}">
+        </li>
+        <li><input type="submit"></li>
+    </ul>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+/* MIXINS HERE */
+
+ellipsis(lines)
+	display -webkit-box
+	-webkit-box-orient vertical
+	-webkit-line-clamp lines
+	-o-text-overflow ellipsis
+	text-overflow ellipsis
+	height auto
+	overflow hidden
+	
+basic_header(size)
+	color $white
+	background-color $main-red
+	padding 13px 10px 11px
+	font-weight $font-wt-extrabold
+	font-size size
+	line-height size - 8
+	text-transform uppercase
+	
+line_header(size)
+	border-bottom 1px solid $deep-grey
+	color $main-red
+	text-transform uppercase
+	font-weight $font-wt-light 
+	font-size size
+	line-height size + 9
+	
+play_icon(size)
+	display block
+	position absolute
+	top 50%
+	left 50%
+	width size
+	height size
+	margin (- size / 2) 0 0 (- size / 2)
+	font-size size
+	color $white
+	opacity 0.7

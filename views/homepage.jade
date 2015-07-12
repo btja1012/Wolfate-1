@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	if username
+		p welcome #{username}
+			a(href="/logout") Logout
+			a(href="/newpost") New Post
+	else 
+		a.login(href="/login") Login
+		a(href="/signup") Sign Up
+
+	h1 Wolfate
+
+	section 
+		for post in myposts
+			h2 
+				a(href="/post/#{post['permalink']}") #{post['title']}
+			p posted #{post['date']} 
+				i by #{post['author']}
+
+			p comments:
+				a(href="/post/{{post['permalink']}}") #{post['comments'] | length}
+				a(href="/edit/{{post['permalink']}}") Edit
+			
+			autoescape false
+				p !{post['body']}
+
+			p Filed under
+				for tag in post.tags
+					a(href="/tag/#{tag}") #{tag}
+
+
+
+

@@ -1,0 +1,150 @@
+@import 'reset.scss';
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import 'variables.scss';
+@import 'icons.scss';
+@import 'defaults.scss';
+
+.user-registration{
+    position: relative;
+    background-image: url(img/defaults/bg-signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 135px 40px 40px 40px;
+    overflow: hidden;
+}
+
+/* ACCOUNT INFORMATION */
+.account-info{
+    float: left;
+    width: 53%;
+    text-align: right;
+    padding-right: 2%;
+    
+    h2{
+        font-weight: 600;
+        margin-top: -8px;
+        font-size: 50px;
+        padding-bottom: 20px;
+        line-height: 50px;
+        color: #2D303D;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .advantages {
+        overflow: hidden;
+        li{
+            float: right;
+            font-size: 20px;
+            line-height: 23px;
+            background: rgba(34,37,51,0.8);
+            margin:0 65px 10px 0;
+            color:#fff;
+            padding:15px 15px 17px 15px;
+            position: relative;
+            &:before{
+                display: block;
+                font-size: 36px;
+                width: 54px;
+                line-height: 54px;
+                border-radius: 50%;
+                background: rgba(34,37,51,0.8);
+                position: absolute;
+                top:50%;
+                margin-top: -27px;
+                right: -65px;
+                text-align: center;
+            }
+            &:nth-child(1):before{background:rgba(108, 0, 208, 0.5);}
+            &:nth-child(2):before{background:rgba(0, 194, 229, 0.6);}
+            &:nth-child(3):before{background:rgba(203, 93, 0, 0.6);}
+            &:nth-child(4):before{background:rgba(92, 208, 0, 0.6);}
+            &:nth-child(5):before{background:rgba(227, 232, 0, 0.54);}
+            &:nth-child(6):before{background:rgba(221, 6, 72, 0.5);}
+        }
+    }
+    
+    p{
+        padding-top: 40px;
+        text-align: center;
+    }
+}
+
+/* SIGN UP FORM SECTION */
+.signup-section{
+    float: left;
+    width: 40%;
+    padding-left: 5%;
+
+    h2:before{
+        display: inline-block;
+        width: 74px;
+        line-height: 74px;
+        background: rgba(34,37,51,1);
+        position: absolute;
+        top:50%;
+        margin-top: -37px;
+        left:0;
+        color:#4B9FDA;
+        font-size: 50px;
+        text-align: center;
+        box-shadow: -100px 0 0 100px rgba(34,37,51,1);
+    }
+    
+    h2,
+    label{
+        position: relative;
+        line-height: 40px;
+        color: #fff;
+        padding: 10px 20px 15px 94px;
+        font-size: 36px;
+        font-weight: normal;
+        background: rgba(34,37,51,0.8);
+        border: 1px solid rgba(34,37,51,0.8);
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    label{
+        line-height: 38px;
+        height: 38px;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+
+    input{
+        border: 1px solid #fff;
+        background: rgba(34,37,51,0.2);
+        color: #fff;
+        line-height: 38px;
+        padding: 0 10px;
+        font-size: 19px;
+        outline: none;
+        display: block;
+    }
+
+    .user-account{
+        padding-top: 30px;
+        overflow: hidden;
+        width: 480px;
+        li{
+            float: left;
+            width: 230px;
+            padding-bottom: 20px;
+            &:nth-child(even){
+                padding-left: 20px;
+                text-align: left;
+            }
+            &:nth-child(odd){
+                clear: both;
+            }
+            &:last-child{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
