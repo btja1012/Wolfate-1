@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div.push-content
+        a(href="/") Blog Home
+
+        form(action="/newpost", method="POST")
+            p #{errors}
+
+            h2 Title
+
+            input(type="text", name="subject", size="120", value="#{subject}")
+
+            h2 Blog Entry
+
+            textarea(name="body", cols="120", rows="20") #{body}
+
+            h2 Tags
+
+            p Comma separated, please
+
+            input(type="text", name="tags", size="120", value="#{tags}")
+
+            input(type="submit", value="Submit")
+
