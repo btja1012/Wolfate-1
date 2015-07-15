@@ -8,12 +8,23 @@
 //		* Before creating a new section, please consult with a teammate.
 // -------------------------------------------------------------------------
 
-// ----- LISTICLES ----- //
-.listicle-controls__container.icon-arrow_left
-	&:before 
-		font-size 35px
-		color $white
-.listicle-controls__container.icon-arrow_right
-	&:before 
-		font-size 35px
-		color $white
+/*-------------- MAIN NAVIGATION ON SCROLL --------------*/
+.scroll-down
+    background-color rgba(45, 48, 61, 1)
+    
+.scroll-down .main-nav__link:before
+    width 50px
+    height 60px
+    margin-top -27px
+    line-height 60px
+    background-size 50px auto
+        
+.scroll-down .main-nav__link
+    padding-top 0
+    padding-left 56px
+    
+.scroll-down .main-nav__link .block
+    line-height 15px
+    
+.scroll-down .site-nav__link
+    line-height 60px

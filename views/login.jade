@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    nav.basic-nav
+        ul
+            li
+                a(href="/signup") Not a user?
+            li
+                a(href="/") Go Back Home
+    
+    h2 Login
+    
+    form(method="post")
+        span.error #{login_error}
+        
+        ul.login
+            li
+                label(for="username") Username
+                input(type="text" name="username" value="#{username}")
+            li
+                label(for="password") Password
+                input(type="password" name="password" value="#{password}")
+            
+            li
+                input(type="submit")
