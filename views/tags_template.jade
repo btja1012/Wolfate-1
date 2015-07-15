@@ -1,42 +1,42 @@
 extends layout
 
 block content
+    div.push-content
+        if username
+            p Welcome #{username}        
+            p
+                a(href="/logout") Logout | 
+                a(href="/newpost") New Post
+        else
+            p You are not logged in!        
+            p
+                a(href="/login") Login | 
+                a(href="/signup") Sign Up
 
-	if username
-		p Welcome #{username}        
-		p
-			a(href="/logout") Logout | 
-			a(href="/newpost") New Post
-	else
-		p You are not logged in!        
-		p
-			a(href="/login") Login | 
-			a(href="/signup") Sign Up
+        h1 Wolfate
 
-	h1 Wolfate
+        for post in myposts
+        h2
+            a(href="/post/{{post['permalink']}}") #{post['title']}
+        p Posted #{post['date']} 
+            i By #{post['author']}
+        br
 
-	for post in myposts
-	h2
-		a(href="/post/{{post['permalink']}}") #{post['title']}
-	p Posted #{post['date']} 
-		i By #{post['author']}
-	br
+        p Comments:
+        a(href="/post/#{post['permalink']}") #{post['comments']|length}
+        a(href="/edit/#{post['permalink']}") EDIT
 
-	p Comments:
-	a(href="/post/#{post['permalink']}") #{post['comments']|length}
-	a(href="/edit/#{post['permalink']}") EDIT
+        br
 
-	br
+        hr
 
-	hr
+        !{post['body']}
 
-	!{post['body']}
-
-	p
-		em Filed Under:
-	for tag in post.tags
-	    if loop.first
-	        a(href="/tag/#{tag}}") #{tag}
-	    else
-	        a(href="/tag/#{tag}") #{tag}
+        p
+            em Filed Under:
+        for tag in post.tags
+            if loop.first
+                a(href="/tag/#{tag}}") #{tag}
+            else
+                a(href="/tag/#{tag}") #{tag}
 

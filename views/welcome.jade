@@ -1,13 +1,13 @@
 extends layout
 
 block content
+    div.push-content
+        p Welcome #{username}
 
-  p Welcome #{username}
-
-  ul
-    li
-      a(href="/") Goto Blog Home
-    li
-      a(href="/logout") Logout
-    li
-      a(href="/newpost") Create a New Post
+        ul
+        li
+          a(href="/") Goto Blog Home
+        li
+          a(href="/logout") Logout
+        li
+          a(href="/newpost") Create a New Post

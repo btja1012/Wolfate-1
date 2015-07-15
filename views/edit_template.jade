@@ -1,30 +1,30 @@
 extends layout
 
 block content
+    div.push-content
+        if username && username === post['author']
+            p You are the author of this post!
+        else
+            p What are you doing dude?!
+        br
+        br
+        form(action="/editedpost" method="POST")
+            span #{errors}
+            ul.edit
+                li
+                    label(for="subject") Title
+                    input(type="text" name="subject" size="120" value="#{post['title']}")
+                li
+                    label(for="body") Entry
+                    input(type="text" name="body" size="120" value="#{post['body']}")
+                li
+                    label(for="tags") Tags
+                    input(type="text" name="tags" value="#{post['tags']}")
 
-    if username === post['author']
-        p You are the author of this post!
-    else
-        p What are you doing dude?!
-    br
-    br
-    form(action="/editedpost" method="POST")
-        #{errors}
-        ul.edit
-            li
-                label(for="subject") Title
-                input(type="text" name="subject" size="120" value="#{post['title']})
-            li
-                label(for="body") Entry
-                input(type="text" name="body" size="120" value="#{post['body']})
-            li
-                label(for="tags") Tags
-                input(type="text" name="tags" value="#{post['tags']}")
+            input(type="text" name="prevPermalink" value="#{post['permalink']}")
 
-        input(type="text" name="prevPermalink" value="#{post['permalink']})
+            input(type="submit" value="Submit")
 
-        input(type="submit" value="Submit")
-    
-    a(href="/post/#{post['permalink']}") Cancel
+        a(href="/post/#{post['permalink']}") Cancel
 
 
