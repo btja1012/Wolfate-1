@@ -1,0 +1,17 @@
+# Vim
+.*.sw[a-z]
+*.un~i
+
+# OsX
+.DS_Store
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# nodejs npm modules
+/node_modules
+/npm-debug.log
+
+# Generated CSS
+/public/themes/default/css/*.css

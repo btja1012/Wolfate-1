@@ -1,14 +1,6 @@
-<!doctype HTML>
-<html>
-<head>
-    <meta charset="UTF-8">
-<title>Internal Error</title>
-<link href="defaults.css" rel="stylesheet" />
-</head>
-<body>
+extends layout
 
-Oops..<br>
-{{error}}
-</body>
-</html>
+block content
 
+    p Oops..
+        #{error}
